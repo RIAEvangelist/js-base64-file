@@ -1,6 +1,6 @@
 {
   "name": "js-base64-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "load conver and save files and images to base64 in js",
   "main": "Base64File.js",
   "scripts": {

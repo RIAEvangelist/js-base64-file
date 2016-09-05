@@ -2,9 +2,11 @@
 
 This is an ideal way to load or convert local files to base64 either for use as a string or to save on disk.
 
+install ` npm i --save js-base64-file `
+
 |method|params|description|
 |------|------|-----------|
-|load  |path,fileName,callback|loads a local file and converts it to base64 if needed. *** note : path should always end with a / *** |
+|load  |path,fileName,callback|loads a local file and converts it to base64 if needed. ***note : path should always end with a slash*** |
 |loadSync  |path,fileName|same as load, but it returns the base64 string instead of passing it to a callback. This could be slow on really large files. |
 |save  |data,path,fileName,callback|saves the data to the specified path and filename|
 
@@ -13,14 +15,13 @@ This is an ideal way to load or convert local files to base64 either for use as 
 |load    | err, base64Data|gives you the base64 encoded file data|
 |save    | err  |will pass any errors back|
 
-
 # Examples
 
 ### loading and converting an image for use in the browser as a data URI
 
 ```javascript
 
-    const Base64File=require('Base64File.js');
+    const Base64File=require('js-base64-file');
     const image=new Base64File;
 
     const file='test.png';
