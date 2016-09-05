@@ -4,6 +4,9 @@ This is an ideal way to load or convert local files to base64 either for use as 
 
 install ` npm i --save js-base64-file `
 
+[see the js-base64-file site](https://riaevangelist.github.io/js-base64-file/)
+
+
 |method|params|description|
 |------|------|-----------|
 |load  |path,fileName,callback|loads a local file and converts it to base64 if needed. ***note : path should always end with a slash*** |
