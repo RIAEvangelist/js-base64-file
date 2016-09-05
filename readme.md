@@ -4,8 +4,15 @@ This is an ideal way to load or convert local files to base64 either for use as 
 
 |method|params|description|
 |------|------|-----------|
-|load  |path,fileName|loads a local file and converts it to base64 if needed. *** note : path should always end with a / *** |
-|save  |data,path,fileName,cb|saves the data to the specified path and filename|
+|load  |path,fileName,callback|loads a local file and converts it to base64 if needed. *** note : path should always end with a / *** |
+|loadSync  |path,fileName|same as load, but it returns the base64 string instead of passing it to a callback. This could be slow on really large files. |
+|save  |data,path,fileName,callback|saves the data to the specified path and filename|
+
+|callback|params|description|
+|--------|------|-----------|
+|load    | err, base64Data|gives you the base64 encoded file data|
+|save    | err  |will pass any errors back|
+
 
 # Examples
 
@@ -22,7 +29,7 @@ This is an ideal way to load or convert local files to base64 either for use as 
     const path=`${__dirname}/`;
 
     //this will load and convert if needed
-    const data=image.load(path,file);
+    const data=image.loadSync(path,file);
     console.log('you could send this image via ws or http to the browser now : \n',data);
 
 ```

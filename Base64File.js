@@ -5,21 +5,44 @@ class Base64Img{
 
     }
 
-    load(path,fileName) {
+    load(
+        path,
+        fileName,
+        callback=function(err,data){}
+    ){
+        const img = fs.readFile(
+            `${path}${fileName}`,
+            function(err,data){
+                if(err){
+                    return callback(err,data);
+                }
+
+                const base64=new Buffer(img).toString('base64');
+
+                return callback(err,base64);
+            }
+        );
+        return new Buffer(img).toString('base64');
+    }
+
+    loadSync(path,fileName) {
         const img = fs.readFileSync(`${path}${fileName}`);
         return new Buffer(img).toString('base64');
     }
 
-    save(data, path, fileName) {
+    save(
+        data,
+        path,
+        fileName,
+        callback=function(err){}
+    ) {
         fs.writeFile(
             `${path}${fileName}`,
             data,
             {
                 encoding: 'base64'
             },
-            function(){
-                console.log(arguments)
-            }
+            callback
         );
     }
 }
