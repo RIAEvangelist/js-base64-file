@@ -4,7 +4,7 @@ This is an ideal way to load or convert local files to base64 either for use as 
 
 |method|params|description|
 |------|------|-----------|
-|load  |path,fileName|loads a local file and converts it to base64 if needed. ***note : path should always end with a / ***|
+|load  |path,fileName|loads a local file and converts it to base64 if needed. *** note : path should always end with a / *** |
 |save  |data,path,fileName,cb|saves the data to the specified path and filename|
 
 # Examples
