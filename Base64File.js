@@ -10,30 +10,30 @@ class Base64Img{
         fileName,
         callback=function(err,data){}
     ){
-        const img = fs.readFile(
+        fs.readFile(
             `${path}${fileName}`,
             function(err,data){
                 if(err){
                     return callback(err,data);
                 }
 
-                const base64=new Buffer(img).toString('base64');
+                const base64=new Buffer(data).toString('base64');
 
                 return callback(err,base64);
             }
         );
-        return new Buffer(img).toString('base64');
     }
 
     loadSync(path,fileName) {
-        const img = fs.readFileSync(`${path}${fileName}`);
-        return new Buffer(img).toString('base64');
+        console.log(`${path}${fileName}`);
+        const file = fs.readFileSync(`${path}${fileName}`);
+        return new Buffer(file).toString('base64');
     }
 
     save(
-        data,
-        path,
-        fileName,
+        data='err',
+        path='./',
+        fileName='error.txt',
         callback=function(err){}
     ) {
         fs.writeFile(
