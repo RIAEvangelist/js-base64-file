@@ -29,7 +29,7 @@ install ` npm i --save js-base64-file `
 
     const file='test.png';
 
-    //path should alwas end in a /
+    //path should always end in a /
     const path=`${__dirname}/`;
 
     //this will load and convert if needed
