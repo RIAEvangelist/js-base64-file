@@ -1,4 +1,9 @@
 import {readFile,readFileSync,writeFile,writeFileSync} from 'fs';
+import fetch from 'node-fetch';
+import Is from 'strong-type';
+
+const is=new Is;
+
 
 class Base64File{
     constructor(){
@@ -26,7 +31,7 @@ class Base64File{
     }
 
     loadSync(path,fileName) {
-        console.log(`${path}${fileName}`);
+        //console.log(`${path}${fileName}`);
         const file = readFileSync(`${path}${fileName}`);
         return Buffer.from(file).toString('base64');
     }
@@ -51,8 +56,7 @@ class Base64File{
     saveSync(
         data='err',
         path='./',
-        fileName='error.txt',
-        callback=function(err){}
+        fileName='error.txt'
     ){
         return writeFileSync(
             `${path}${fileName}`,
@@ -63,8 +67,23 @@ class Base64File{
         );
     }
 
-    loadRemote(url){
-
+    async loadRemote(
+        url,
+        file,
+        fetchParams={
+            // These properties are part of the Fetch Standard
+            // https://github.com/node-fetch/node-fetch#options
+            method: 'GET',
+            headers: {},            // Request headers. format is the identical to that accepted by the Headers constructor (see below)
+            body: null
+        }
+    ){
+        is.string(url);
+        is.string(file);
+        is.object(fetchParams);
+        const response = await fetch(`${url}${file}`,fetchParams);
+        const buffer = await response.buffer();     
+        return buffer.toString('base64');        
     }
 }
 

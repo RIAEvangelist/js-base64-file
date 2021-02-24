@@ -47,3 +47,6 @@ install ` npm i --save js-base64-file `
 ```
 
 It's that simple! And it will work with any file type!
+
+
+https://github.com/node-fetch/node-fetch#options

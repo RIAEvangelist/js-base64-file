@@ -5,7 +5,7 @@
   "exports": "index.js",
   "type": "module",
   "scripts": {
-    "test": "node test.js"
+    "test": "npm i && c8 -r lcov -r html node ./test/CI.js && c8 report"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,12 @@
   },
   "homepage": "https://github.com/RIAEvangelist/js-base64-img#readme",
   "dependencies": {
+    "fetch": "^1.1.0",
+    "node-fetch": "^2.6.1",
+    "strong-type": "^0.1.6"
+  },
+  "devDependencies": {
+    "c8": "^7.6.0",
     "vanilla-test": "^1.4.5"
   }
 }
