@@ -1,8 +1,8 @@
 {
   "name": "js-base64-file",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "load fetch convert and save local and remote files and images to base64 in js",
-  "exports": "index.js",
+  "exports": "./index.js",
   "type": "module",
   "scripts": {
     "test": "npm i && c8 -r lcov -r html node ./test/CI.js && c8 report"
