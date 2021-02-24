@@ -1,5 +1,5 @@
-./example
-./coverage
-./test
-./travis.yml
-./test.png
+example
+coverage
+test
+.travis.yml
+test.png

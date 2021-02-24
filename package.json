@@ -1,6 +1,6 @@
 {
   "name": "js-base64-file",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "load fetch convert and save local and remote files and images to base64 in js",
   "exports": "index.js",
   "type": "module",
