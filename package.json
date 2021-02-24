@@ -7,6 +7,10 @@
   "scripts": {
     "test": "npm i && c8 -r lcov -r html node ./test/CI.js && c8 report"
   },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RIAEvangelist/js-base64-img.git"
