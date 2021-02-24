@@ -1,7 +1,7 @@
 {
   "name": "js-base64-file",
-  "version": "1.0.1",
-  "description": "load convert and save local and remote files and images to base64 in js",
+  "version": "2.0.0",
+  "description": "load fetch convert and save local and remote files and images to base64 in js",
   "exports": "index.js",
   "type": "module",
   "scripts": {
@@ -15,6 +15,7 @@
     "base64",
     "file",
     "local",
+    "fetch",
     "remote",
     "image",
     "dataURI"
