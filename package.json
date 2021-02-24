@@ -1,8 +1,9 @@
 {
   "name": "js-base64-file",
   "version": "1.0.1",
-  "description": "load conver and save files and images to base64 in js",
-  "main": "Base64File.js",
+  "description": "load convert and save local and remote files and images to base64 in js",
+  "exports": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node test.js"
   },
@@ -13,13 +14,18 @@
   "keywords": [
     "base64",
     "file",
+    "local",
+    "remote",
     "image",
     "dataURI"
   ],
   "author": "Brandon Nozaki Miller",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/RIAEvangelist/js-base64-img/issues"
   },
-  "homepage": "https://github.com/RIAEvangelist/js-base64-img#readme"
+  "homepage": "https://github.com/RIAEvangelist/js-base64-img#readme",
+  "dependencies": {
+    "vanilla-test": "^1.4.5"
+  }
 }
