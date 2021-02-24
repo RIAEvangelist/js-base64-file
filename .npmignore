@@ -3,3 +3,6 @@ coverage
 test
 .travis.yml
 test.png
+copy-async-test.png
+copy-sync-test.png
+megacat-2.png
