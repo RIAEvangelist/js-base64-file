@@ -18,13 +18,6 @@ install ` npm i js-base64-file `
 |save       |data,path,fileName,callback|saves the data to the specified path and filename async callback|
 |saveSync   |data,path,fileName         |saves the data to the specified path and filename sync|
 
-## Class Instance
-
-|callback|params|description|
-|--------|------|-----------|
-|load    | err, base64Data  |gives you the base64 encoded file data|
-|save    | err, data        |will pass any errors back it is unlikely there will ever be data|
-
 ----
 
 # Testing & Coverage
