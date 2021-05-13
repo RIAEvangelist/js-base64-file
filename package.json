@@ -11,6 +11,9 @@
     "example": "example",
     "test": "test"
   },
+  "engines" : { 
+    "node" : ">=14.0.0" 
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RIAEvangelist/js-base64-img.git"
